@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>working with EJS</title>
+</head>
+<body>
+      <h2>Welcome Home Darling!</h2>
+      <p>Start cooking because I'm starving already</p>
+      <h3>The sum of 3 + 5 is: <%= 3 + 5 %></h3>
+      <!-- start of js -->
+      <% console.log("message from the client!")
+            const cartList=["apple","banana","grapes","saging","mansanas","rice","chicken joy"];
+            let counter=1;      
+      %>
+      <!-- end of js -->
+      <h2>Items in Cart</h2>
+      <ol>
+      <!-- start of js -->
+      <% cartList.forEach((item)=>{
+            if(counter!==5){
+            %>
+            <!-- execute under if -->
+              <li><%= item %></li>
+              <!-- execute under if -->
+            <%}else{%>
+                  <!-- execute under else -->
+            <li><h3><%= item %></h3></li>  
+                     <!--  execute under else-->
+            <% }
+            counter++
+      })%>
+      <!-- end of js -->
+
+      </ol>
+</body>
+</html>
+<!--inject data-->
+<!--write js-->
+<!--looping-->
+<!--conditionals-->
